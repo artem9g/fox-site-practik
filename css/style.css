@@ -1482,6 +1482,46 @@ h6 {
   width: 20px;
 }
 
+.my-skills {
+  background: #f7f7f7;
+}
+
+.my-skills__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 80px 0 80px 0;
+}
+
+.my-skills__texts {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 485px;
+          flex: 0 1 485px;
+}
+
+.my-skills__text {
+  margin-bottom: 32px;
+}
+
+.my-skills__text p {
+  font-weight: 500;
+  line-height: 2.285;
+  letter-spacing: -0.28px;
+}
+
+.my-skills__diagrams {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 560px;
+          flex: 0 1 560px;
+}
+
+.my-skills__title {
+  margin-bottom: 12px;
+}
+
 /**
  * Swiper 7.2.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
