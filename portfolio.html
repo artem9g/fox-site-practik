@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -6,9 +6,9 @@
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20231017083259" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20231029115722" />
 	<link rel="shortcut icon" href="#" />
-	<!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js?_v=20231017083259" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+	<!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js?_v=20231029115722" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -36,7 +36,119 @@
 			</div>
 		</header>
 
-		<main class="page">
+		<main class="page-portfolio">
+			<section class="page-portfolio__hero hero hero-pages">
+				<div class="hero__container hero__container-center">
+					<div class="hero__texts">
+						<h1 class="hero__title">portfolio</h1>
+						<div class="hero__breadcrumbs">
+							<a href="#" class="hero__breadcrumb">Home</a>
+							<a href="#" class="hero__breadcrumb">Portfolio</a>
+						</div>
+					</div>
+				</div>
+				<div class="hero__background-text">
+					<p>Portfolio</p>
+				</div>
+			</section>
+			<section class="page-portfolio__portfolio portfolio">
+				<div class="portfolio__container">
+					<!-- Оболонка слайдера -->
+					<div class="portfolio__slider swiper">
+						<div class="portfolio__header">
+							<div class="portfolio__title">
+								<div class="portfolio__title sections-title">
+									<span class="sections-title__number">01</span>
+									<h4 class="sections-title__title">portfolio</h4>
+								</div>
+							</div>
+							<ul class="portfolio__navigation">
+								<li class="portfolio__filter-link"><button class="filter-all">All</button></li>
+								<li class="portfolio__filter-link"><button class="portfolio-slider-maim-page-ui-ux">ui/ux-design</button></li>
+								<li class="portfolio__filter-link"><button>PRODUCT DESIGN</button></li>
+								<li class="portfolio__filter-link"><button>bRANDING</button></li>
+								<li class="portfolio__filter-link"><button>WEB DESIGN</button></li>
+							</ul>
+							<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+							<div class="portfolio__arrows">
+								<button type="button" class="swiper-button-prev"></button>
+								<button type="button" class="swiper-button-next"></button>
+							</div>
+						</div>
+
+						<!-- Частина слайдера, що рухається -->
+						<div class="portfolio__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<picture><source srcset="img/portfolio-slider/Image.webp" type="image/webp"><img class="portfolio__slide swiper-slide" src="img/portfolio-slider/Image.jpg" alt="#" /></picture>
+							<picture><source srcset="img/portfolio-slider/Image-2.webp" type="image/webp"><img class="portfolio__slide swiper-slide" src="img/portfolio-slider/Image-2.jpg" alt="#" /></picture>
+							<picture><source srcset="img/portfolio-slider/Image.webp" type="image/webp"><img class="portfolio__slide swiper-slide" src="img/portfolio-slider/Image.jpg" alt="#" /></picture>
+							<picture><source srcset="img/portfolio-slider/Image-2.webp" type="image/webp"><img class="portfolio__slide swiper-slide" src="img/portfolio-slider/Image-2.jpg" alt="#" /></picture>
+							<picture><source srcset="img/portfolio-slider/Image.webp" type="image/webp"><img class="portfolio__slide swiper-slide" src="img/portfolio-slider/Image.jpg" alt="#" /></picture>
+							<picture><source srcset="img/portfolio-slider/Image.webp" type="image/webp"><img class="portfolio__slide swiper-slide portfolio-slider-maim-page-product-design" src="img/portfolio-slider/Image.jpg" alt="#" /></picture>
+							<picture><source srcset="img/portfolio-slider/Image.webp" type="image/webp"><img class="portfolio__slide swiper-slide" src="img/portfolio-slider/Image.jpg" alt="#" /></picture>
+						</div>
+						<!-- Якщо потрібна пагінація -->
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+			<section class="page-portfolio__my-partners my-partners">
+				<div class="my-partners__container">
+					<div class="sections-title sections-title--pages sections-title--center">
+						<span class="sections-title__number">02</span>
+						<h4 class="sections-title__title">My Partners</h4>
+					</div>
+					<div class="my-partners__row">
+						<picture><source srcset="img/about/my-partners/behance.webp" type="image/webp"><img class="my-partners__item" src="img/about/my-partners/behance.png" alt="#" /></picture>
+						<picture><source srcset="img/about/my-partners/slack.webp" type="image/webp"><img class="my-partners__item" src="img/about/my-partners/slack.png" alt="#" /></picture>
+						<picture><source srcset="img/about/my-partners/dribbble.webp" type="image/webp"><img class="my-partners__item" src="img/about/my-partners/dribbble.png" alt="#" /></picture>
+						<picture><source srcset="img/about/my-partners/twilio.webp" type="image/webp"><img class="my-partners__item" src="img/about/my-partners/twilio.png" alt="#" /></picture>
+						<picture><source srcset="img/about/my-partners/github.webp" type="image/webp"><img class="my-partners__item" src="img/about/my-partners/github.png" alt="#" /></picture>
+						<picture><source srcset="img/about/my-partners/chargebee.webp" type="image/webp"><img class="my-partners__item" src="img/about/my-partners/chargebee.png" alt="#" /></picture>
+						<picture><source srcset="img/about/my-partners/udemy.webp" type="image/webp"><img class="my-partners__item" src="img/about/my-partners/udemy.png" alt="#" /></picture>
+						<picture><source srcset="img/about/my-partners/instagram.webp" type="image/webp"><img class="my-partners__item" src="img/about/my-partners/instagram.png" alt="#" /></picture>
+						<picture><source srcset="img/about/my-partners/mapbox.webp" type="image/webp"><img class="my-partners__item" src="img/about/my-partners/mapbox.png" alt="#" /></picture>
+					</div>
+				</div>
+			</section>
+			<section class="page-portfolio__lets-work lets-work">
+				<div class="lets-work__container">
+					<div class="lets-work__title">let’s work together on Your Next Project</div>
+					<button class="lets-work__me-hire-now hire-button orange-white-btn">hire me now</button>
+					<button class="lets-work__download-cv cv-button">Download CV</button>
+				</div>
+			</section>
+			<section class="page-portfolio__main-accordion main-accordion">
+				<div class="main-accordion__container">
+					<div class="sections-title sections-title--pages sections-title--center">
+						<span class="sections-title__number">03</span>
+						<h4 class="sections-title__title">HAVE ANY QUESTIONS?</h4>
+					</div>
+					<div data-spollers class="spollers">
+						<details class="spollers__item">
+							<summary class="spollers__title">Where Can I Find More Information?</summary>
+							<div class="spollers__body">
+								Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
+								consequat sunt nostrud amet.
+							</div>
+						</details>
+						<details class="spollers__item">
+							<summary class="spollers__title">What Kinds of Payment Do You Accept?</summary>
+							<div class="spollers__body">
+								Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
+								consequat sunt nostrud amet.
+							</div>
+						</details>
+						<details class="spollers__item">
+							<summary class="spollers__title">What Are Your Terms and Conditions?</summary>
+							<div class="spollers__body">
+								Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
+								consequat sunt nostrud amet.
+							</div>
+						</details>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -45,7 +157,7 @@
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20231017083259"></script>
+	<script src="js/app.min.js?_v=20231029115722"></script>
 </body>
 
 </html>
