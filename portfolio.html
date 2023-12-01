@@ -2,13 +2,21 @@
 <html lang="en">
 
 <head>
-	<title>HomePage</title>
+	<title>Portfolio</title>
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20231029115722" />
-	<link rel="shortcut icon" href="#" />
-	<!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js?_v=20231029115722" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+	<style>
+		body {
+			opacity: 0;
+			background: url("img/preloader.gif") center no-repeat;
+			max-height: 100vh;
+			overflow: hidden;
+			transition: all 0.2s ease;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.min.css?_v=20231201123838" />
+	<link rel="shortcut icon" href="img/favicon-32x32.png" />
+	<!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js?_v=20231201123838" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -17,7 +25,7 @@
 	<div class="wrapper">
 		<header data-scroll="86" data-scroll-show class="header">
 			<div class="header__container">
-				<a class="header__logo"><span class="letter-F">F</span><span class="letter-O">O</span><span class="letter-X">X</span></a>
+				<a class="header__logo" href="./"><span class="letter-F">F</span><span class="letter-O">O</span><span class="letter-X">X</span></a>
 
 				<div class="header__menu menu">
 					<div class="menu__wrapper-icon wrapper-icon-menu">
@@ -25,14 +33,14 @@
 					</div>
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="#" class="menu__link">Home</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">About</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Service</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Portfolio</a></li>
+							<li class="menu__item"><a id="main-page" href="./" class="menu__link">Home</a></li>
+							<li class="menu__item"><a id="about-page" href="./about.html" class="menu__link">About</a></li>
+							<li class="menu__item"><a id="service-page" href="./service.html" class="menu__link">Service</a></li>
+							<li class="menu__item"><a id="portfolio-page" href="./portfolio.html" class="menu__link">Portfolio</a></li>
 						</ul>
 					</nav>
 				</div>
-				<button class="header__button trp-red-btn">CONTACT</button>
+				<a id="contact-page" href="./contact.html" class="header__button trp-red-btn">CONTACT</a>
 			</div>
 		</header>
 
@@ -42,7 +50,7 @@
 					<div class="hero__texts">
 						<h1 class="hero__title">portfolio</h1>
 						<div class="hero__breadcrumbs">
-							<a href="#" class="hero__breadcrumb">Home</a>
+							<a href="./" class="hero__breadcrumb">Home</a>
 							<a href="#" class="hero__breadcrumb">Portfolio</a>
 						</div>
 					</div>
@@ -79,13 +87,15 @@
 						<!-- Частина слайдера, що рухається -->
 						<div class="portfolio__wrapper swiper-wrapper">
 							<!-- Слайд -->
-							<picture><source srcset="img/portfolio-slider/Image.webp" type="image/webp"><img class="portfolio__slide swiper-slide" src="img/portfolio-slider/Image.jpg" alt="#" /></picture>
-							<picture><source srcset="img/portfolio-slider/Image-2.webp" type="image/webp"><img class="portfolio__slide swiper-slide" src="img/portfolio-slider/Image-2.jpg" alt="#" /></picture>
-							<picture><source srcset="img/portfolio-slider/Image.webp" type="image/webp"><img class="portfolio__slide swiper-slide" src="img/portfolio-slider/Image.jpg" alt="#" /></picture>
-							<picture><source srcset="img/portfolio-slider/Image-2.webp" type="image/webp"><img class="portfolio__slide swiper-slide" src="img/portfolio-slider/Image-2.jpg" alt="#" /></picture>
-							<picture><source srcset="img/portfolio-slider/Image.webp" type="image/webp"><img class="portfolio__slide swiper-slide" src="img/portfolio-slider/Image.jpg" alt="#" /></picture>
-							<picture><source srcset="img/portfolio-slider/Image.webp" type="image/webp"><img class="portfolio__slide swiper-slide portfolio-slider-maim-page-product-design" src="img/portfolio-slider/Image.jpg" alt="#" /></picture>
-							<picture><source srcset="img/portfolio-slider/Image.webp" type="image/webp"><img class="portfolio__slide swiper-slide" src="img/portfolio-slider/Image.jpg" alt="#" /></picture>
+							<div class="portfolio__slide swiper-slide"><picture><source srcset="img/portfolio-slider/Image.webp" type="image/webp"><img src="img/portfolio-slider/Image.jpg" alt="#" /></picture></div>
+							<div class="portfolio__slide swiper-slide"><picture><source srcset="img/portfolio-slider/Image-2.webp" type="image/webp"><img src="img/portfolio-slider/Image-2.jpg" alt="#" /></picture></div>
+							<div class="portfolio__slide swiper-slide"><picture><source srcset="img/portfolio-slider/Image.webp" type="image/webp"><img src="img/portfolio-slider/Image.jpg" alt="#" /></picture></div>
+							<div class="portfolio__slide swiper-slide"><picture><source srcset="img/portfolio-slider/Image-2.webp" type="image/webp"><img src="img/portfolio-slider/Image-2.jpg" alt="#" /></picture></div>
+							<div class="portfolio__slide swiper-slide"><picture><source srcset="img/portfolio-slider/Image.webp" type="image/webp"><img src="img/portfolio-slider/Image.jpg" alt="#" /></picture></div>
+							<div class="portfolio__slide swiper-slide">
+								<picture><source srcset="img/portfolio-slider/Image.webp" type="image/webp"><img class="portfolio__slide swiper-slide portfolio-slider-maim-page-product-design" src="img/portfolio-slider/Image.jpg" alt="#" /></picture>
+							</div>
+							<div class="portfolio__slide swiper-slide"><picture><source srcset="img/portfolio-slider/Image.webp" type="image/webp"><img class="portfolio__slide swiper-slide" src="img/portfolio-slider/Image.jpg" alt="#" /></picture></div>
 						</div>
 						<!-- Якщо потрібна пагінація -->
 						<div class="swiper-pagination"></div>
@@ -157,7 +167,7 @@
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20231029115722"></script>
+	<script src="js/app.min.js?_v=20231201123838"></script>
 </body>
 
 </html>

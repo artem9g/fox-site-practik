@@ -13,6 +13,13 @@
             document.documentElement.classList.add(className);
         }));
     }
+    function addLoadedClass() {
+        if (!document.documentElement.classList.contains("loading")) window.addEventListener("load", (function() {
+            setTimeout((function() {
+                document.documentElement.classList.add("loaded");
+            }), 0);
+        }));
+    }
     let _slideUp = (target, duration = 500, showmore = 0) => {
         if (!target.classList.contains("_slide")) {
             target.classList.add("_slide");
@@ -3886,9 +3893,13 @@
             spaceBetween: 10,
             autoHeight: true,
             speed: 800,
+            navigation: true,
             pagination: {
                 el: ".swiper-pagination",
-                clickable: true
+                type: "fraction",
+                formatFractionCurrent: function(number) {
+                    return "0" + number;
+                }
             },
             navigation: {
                 prevEl: ".swiper-button-prev",
@@ -3913,6 +3924,16 @@
             },
             on: {}
         });
+        let swiperTestimonialTop;
+        if (document.querySelector(".swiper-testimonial")) swiperTestimonialTop = new swiper_core_Swiper(".testimonial_swiper-testimonial", {
+            modules: [ Pagination, Controller ],
+            pagination: true,
+            pagination: {
+                el: ".testimonial__swiper-top__slider>.swiper-pagination-top",
+                clickable: true
+            },
+            on: {}
+        });
         let swiperTestimonialBottom;
         if (document.querySelector(".swiper-testimonial")) swiperTestimonialBottom = new swiper_core_Swiper(".swiper-testimonial", {
             modules: [ Navigation, Pagination, Autoplay, Controller ],
@@ -3934,17 +3955,6 @@
             },
             on: {}
         });
-        let swiperTestimonialTop;
-        if (document.querySelector(".swiper-testimonial")) swiperTestimonialTop = new swiper_core_Swiper(".testimonial_swiper-testimonial", {
-            modules: [ Pagination, Controller ],
-            pagination: true,
-            pagination: {
-                el: ".testimonial__swiper-top__slider>.swiper-pagination-top",
-                clickable: true
-            },
-            on: {}
-        });
-        console.log(swiperTestimonialBottom);
     }
     window.addEventListener("load", (function(e) {
         initSliders();
@@ -4076,8 +4086,54 @@
         const beforeElement = parentLineElement.querySelector(".diagram__donwload-line");
         beforeElement.style.width = value + "%";
     }));
+    document.addEventListener("DOMContentLoaded", (function() {
+        let currentPagePath = window.location.pathname;
+        let currentPageName = currentPagePath.split("/").pop().split(".").shift();
+        let linkIndetificator = "";
+        let linkIndetificatorWhite = "";
+        switch (currentPageName) {
+          case "":
+            linkIndetificator = "main-page";
+            break;
+
+          case "about":
+            linkIndetificator = "about-page";
+            break;
+
+          case "service":
+            linkIndetificator = "service-page";
+            break;
+
+          case "portfolio":
+            linkIndetificator = "portfolio-page";
+            break;
+
+          case "contact":
+            linkIndetificatorWhite = "contact-page";
+            break;
+
+          default:
+            linkIndetificator = "";
+            break;
+        }
+        let link = document.getElementById(linkIndetificator);
+        let linkWhite = document.getElementById(linkIndetificatorWhite);
+        if (link) {
+            link.style.color = "red";
+            link.removeAttribute("href");
+        }
+        if (linkWhite) {
+            linkWhite.style.color = "grey";
+            linkWhite.removeAttribute("href");
+        }
+        if (currentPageName === "") {
+            let logoLink = document.querySelector(".header__logo");
+            logoLink.removeAttribute("href");
+        }
+    }));
     window["FLS"] = true;
     isWebp();
+    addLoadedClass();
     menuInit();
     spollers();
     headerScroll();
