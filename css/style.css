@@ -2420,7 +2420,7 @@ body .load {
 
 @media (max-width: 20em) {
   .hero__socials {
-    padding-top: 21.25rem;
+    padding-top: 15rem;
   }
 
   .lets-work__title {
@@ -2650,6 +2650,11 @@ body .load {
 
   .sections-title__title {
     letter-spacing: 0;
+  }
+
+  .webp .hero {
+    background: no-repeat top/cover url("../img/hero-bg-lines.svg"), #111214;
+    margin-bottom: 2.75rem;
   }
 
   .hero {
@@ -3268,15 +3273,15 @@ body .load {
 }
 
 @media (min-width: 20em) and (max-width: 47.99875em) {
-@supports (padding-top: clamp( 13.75rem , 26.607382026rem  +  -26.7869101299vw , 21.25rem )) {
+@supports (padding-top: clamp( 13.75rem , 15.8928970043rem  +  -4.4644850217vw , 15rem )) {
     .hero__socials {
-      padding-top: clamp( 13.75rem , 26.607382026rem  +  -26.7869101299vw , 21.25rem );
+      padding-top: clamp( 13.75rem , 15.8928970043rem  +  -4.4644850217vw , 15rem );
     }
 }
 
-@supports not (padding-top: clamp( 13.75rem , 26.607382026rem  +  -26.7869101299vw , 21.25rem )) {
+@supports not (padding-top: clamp( 13.75rem , 15.8928970043rem  +  -4.4644850217vw , 15rem )) {
     .hero__socials {
-      padding-top: calc(21.25rem + -7.5 * (100vw - 20rem) / 27.99875);
+      padding-top: calc(15rem + -1.25 * (100vw - 20rem) / 27.99875);
     }
 }
 }
