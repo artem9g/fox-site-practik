@@ -2652,13 +2652,8 @@ body .load {
     letter-spacing: 0;
   }
 
-  .webp .hero {
-    background: no-repeat top/cover url("../img/hero-bg-lines.svg"), #111214;
-    margin-bottom: 2.75rem;
-  }
-
   .hero {
-    background: no-repeat top/cover url("../img/hero-bg-lines.svg"), #111214;
+    background: no-repeat top/cover url("../img/hero-bg-lines.svg"), #111214 !important;
     margin-bottom: 2.75rem;
   }
 
