@@ -880,13 +880,6 @@ body .load {
   transition: all 0.4s linear;
 }
 
-.loaded body {
-  opacity: 1;
-  background: none;
-  height: 100%;
-  overflow: initial;
-}
-
 .about-me__container {
   position: relative;
   display: -ms-grid;
@@ -2653,7 +2646,7 @@ body .load {
   }
 
   .hero {
-    background: no-repeat top/cover url("../img/hero-bg-lines.svg"), #111214;
+    background: no-repeat top/cover url("../img/hero-bg-lines.svg"), #111214 !important;
     margin-bottom: 2.75rem;
   }
 
